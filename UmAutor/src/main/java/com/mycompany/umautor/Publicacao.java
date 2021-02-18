@@ -1,5 +1,6 @@
 package com.mycompany.umautor;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -32,16 +33,7 @@ public class Publicacao {
         this.autor = newAutor;
     }
     
-    public String format(Collection<?> c) {
-        String s = c.stream().map(Object::toString).collect(Collectors.joining(","));
-        return String.format("[%s]", s);
-    }
     
-    public String retornaPubli() {
-        //Object listString = autor.stream().map(Object::toString).collect(Collectors.joining(", "));
-        return ("[" + id + "," + titulo + "," + paginaInicial + "," + paginaFinal + "," + anoPublicacao + "," + format(autor) + "]");
-        //return format(autor);
-    }
 
     
 }

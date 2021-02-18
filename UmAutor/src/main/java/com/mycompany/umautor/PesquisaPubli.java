@@ -36,26 +36,40 @@ public class PesquisaPubli {
         //Publicação 2
         listaDeAutores2.add(aut3);
         listaDeAutores2.add(aut4);
-        
         return null;
     }
-    
     
     //"Armazenando" as publicações
     //Publicacao pub1 = new Publicacao(1,"Hellboy: Seed of Destruction",1,120,1994,"Mike Mignola");
     Publicacao pub1 = new Publicacao(1,"Hellboy: Seed of Destruction",1,120,1994,listaDeAutores1);
     Publicacao pub2 = new Publicacao(2,"Coraline",1,186,2002,listaDeAutores2);
-
     
+    
+    /*public List<Publicacao> retornaPubli() {
+        //Object listString = autor.stream().map(Object::toString).collect(Collectors.joining(", "));
+        //return ("[" + id + "," + titulo + "," + paginaInicial + "," + paginaFinal + "," + anoPublicacao + "," + autor + "]");
+        //return format(autor);
+        List<Publicacao> lista = new ArrayList<>();
+        lista.add(pub1);
+        lista.add(pub2);
+         
+        //return lista;
+        StringBuilder b = new StringBuilder();
+        lista.forEach(b::append);
+        
+        return lista;
+    }*/
     /**
      * Retornando uma publicação
      */
     @WebMethod(operationName = "retornaPubli")
-    public String retornaPubli(@WebParam(name = "titulo") String tituloPubli) {
+    public List<Publicacao> retornaPubli(@WebParam(name = "titulo") String tituloPubli) {
         //return tituloPubli;
+        //return pub1.retornaPubli()+pub2.retornaPubli();
+        List<Publicacao> lista = new ArrayList<>();
+        lista.add(pub1);
+        lista.add(pub2);
         
-        
-        return pub1.retornaPubli()+pub2.retornaPubli();
-        //return pub1.autor + pub2.autor;
+        return lista;
     }
 }
