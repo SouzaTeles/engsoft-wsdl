@@ -39,8 +39,8 @@ public class Publicacao {
     
     public String retornaPubli() {
         //Object listString = autor.stream().map(Object::toString).collect(Collectors.joining(", "));
-        //return ("[" + id + "," + titulo + "," + paginaInicial + "," + paginaFinal + "," + anoPublicacao + "," + format() + "]");
-        return format(autor);
+        return ("[" + id + "," + titulo + "," + paginaInicial + "," + paginaFinal + "," + anoPublicacao + "," + format(autor) + "]");
+        //return format(autor);
     }
 
     
