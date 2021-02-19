@@ -7,7 +7,6 @@ package com.mycompany.umautor;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.json.Json;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -28,37 +27,21 @@ public class PesquisaPubli {
     List<Autor> listaDeAutores1 = new ArrayList<>();
     List<Autor> listaDeAutores2 = new ArrayList<>();
     
-    //agrupando os autores
-    public ArrayList agrupaAutores() {
+    //"Armazenando" as publicações
+    Publicacao pub1 = new Publicacao(1,"Hellboy: Seed of Destruction",1,120,1994,listaDeAutores1);
+    Publicacao pub2 = new Publicacao(2,"Coraline",1,186,2002,listaDeAutores2);
+    
+    //importante não colocar o *VOID* aqui! Senão a lista de autores fica vazia!
+    public PesquisaPubli() {
+        //agrupando os autores
         //Publicação 1
         listaDeAutores1.add(aut1);
         listaDeAutores1.add(aut2);
         //Publicação 2
         listaDeAutores2.add(aut3);
         listaDeAutores2.add(aut4);
-        return null;
     }
-    
-    //"Armazenando" as publicações
-    //Publicacao pub1 = new Publicacao(1,"Hellboy: Seed of Destruction",1,120,1994,"Mike Mignola");
-    Publicacao pub1 = new Publicacao(1,"Hellboy: Seed of Destruction",1,120,1994,listaDeAutores1);
-    Publicacao pub2 = new Publicacao(2,"Coraline",1,186,2002,listaDeAutores2);
-    
-    
-    /*public List<Publicacao> retornaPubli() {
-        //Object listString = autor.stream().map(Object::toString).collect(Collectors.joining(", "));
-        //return ("[" + id + "," + titulo + "," + paginaInicial + "," + paginaFinal + "," + anoPublicacao + "," + autor + "]");
-        //return format(autor);
-        List<Publicacao> lista = new ArrayList<>();
-        lista.add(pub1);
-        lista.add(pub2);
-         
-        //return lista;
-        StringBuilder b = new StringBuilder();
-        lista.forEach(b::append);
         
-        return lista;
-    }*/
     /**
      * Retornando uma publicação
      */
@@ -66,6 +49,7 @@ public class PesquisaPubli {
     public List<Publicacao> retornaPubli(@WebParam(name = "titulo") String tituloPubli) {
         //return tituloPubli;
         //return pub1.retornaPubli()+pub2.retornaPubli();
+        
         List<Publicacao> lista = new ArrayList<>();
         lista.add(pub1);
         lista.add(pub2);

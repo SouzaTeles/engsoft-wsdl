@@ -1,9 +1,6 @@
 package com.mycompany.umautor;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -22,18 +19,21 @@ public class Publicacao {
     public int paginaInicial;
     public int paginaFinal;
     public int anoPublicacao;
-    public List autor;
+    public List<Autor> autores;
+    //public List<Autor> autores = new ArrayList<>();
     
-    Publicacao(int newId, String newTitulo, int newPaginaInicial, int newPaginaFinal, int newAnoPublicacao, List newAutor){
+    
+    public Publicacao(int newId, String newTitulo, int newPaginaInicial, int newPaginaFinal, int newAnoPublicacao, List<Autor> newAutores){
         this.id = newId;
         this.titulo = newTitulo;
         this.paginaInicial = newPaginaInicial;
         this.paginaFinal = newPaginaFinal;
         this.anoPublicacao = newAnoPublicacao;
-        this.autor = newAutor;
+        this.autores = newAutores;
     }
     
     
-
     
+    
+
 }

@@ -20,9 +20,6 @@ public class Autor {
         this.cpf = newCpf;
         this.nome = newNome;
     }
-    
-    public String retornaAutor() {
-        return (id + "," + cpf + "," + nome);
-    }
+
 }
 
