@@ -7,22 +7,37 @@ package com.mycompany.umautor;
 
 /**
  *
- * @author Paco
+ * @author Anderson, Lucas, Luís e Maycon
  */
 public class Autor {
     
-    public int id;
-    public String cpf;
-    public String nome;
-    
-    public Autor (int newId, String newCpf, String newNome) {
-        this.id = newId;
-        this.cpf = newCpf;
-        this.nome = newNome;
+    private int id;
+    private String cpf;
+    private String nome;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
     
-    public String retornaAutor() {
-        return (id + "," + cpf + "," + nome);
-    }
 }
 
