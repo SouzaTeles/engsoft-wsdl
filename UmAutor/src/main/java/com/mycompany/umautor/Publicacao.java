@@ -20,8 +20,7 @@ public class Publicacao {
     public int paginaFinal;
     public int anoPublicacao;
     public List<Autor> autores;
-    //public List<Autor> autores = new ArrayList<>();
-    
+  
     
     public Publicacao(int newId, String newTitulo, int newPaginaInicial, int newPaginaFinal, int newAnoPublicacao, List<Autor> newAutores){
         this.id = newId;
@@ -31,9 +30,4 @@ public class Publicacao {
         this.anoPublicacao = newAnoPublicacao;
         this.autores = newAutores;
     }
-    
-    
-    
-    
-
 }
