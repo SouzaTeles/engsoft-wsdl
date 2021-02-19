@@ -18,28 +18,68 @@ import javax.jws.WebParam;
 @WebService(serviceName = "PesquisaPublicacao")
 public class PesquisaPubli {
     
-    //Criando e "armazenando" os autores
-    Autor aut1 = new Autor(1,"22222222222","Mike Mignola");
-    Autor aut2 = new Autor(1,"33333333333","John Byrne");
-    Autor aut3 = new Autor(1,"44444444444","Neil Gaiman");
-    Autor aut4 = new Autor(1,"55555555555","Dave McKean");
-    
-    List<Autor> listaDeAutores1 = new ArrayList<>();
-    List<Autor> listaDeAutores2 = new ArrayList<>();
-    
-    //"Armazenando" as publicações
-    Publicacao pub1 = new Publicacao(1,"Hellboy: Seed of Destruction",1,120,1994,listaDeAutores1);
-    Publicacao pub2 = new Publicacao(2,"Coraline",1,186,2002,listaDeAutores2);
+   //Criando e "armazenando" os autores
+    Publicacao publicacao1;
+    Publicacao publicacao2;
+    Publicacao publicacao3;
     
     //importante não colocar o *VOID* aqui! Senão a lista de autores fica vazia!
     public PesquisaPubli() {
+       Autor autor1 = new Autor();
+        autor1.setId(1);
+        autor1.setCpf("22222222222");
+        autor1.setNome("Mike Mignola");
+        
+        Autor autor2 = new Autor();
+        autor2.setId(1);
+        autor2.setCpf("3333333333");
+        autor2.setNome("John Byrne");
+
+        Autor autor3 = new Autor();
+        autor3.setId(1);
+        autor3.setCpf("3333333333");
+        autor3.setNome("John Mignola");
+        
+        Autor autor4 = new Autor();
+        autor4.setId(1);
+        autor4.setCpf("22222222222");
+        autor4.setNome("Mike");
+      
+        
         //agrupando os autores
         //Publicação 1
-        listaDeAutores1.add(aut1);
-        listaDeAutores1.add(aut2);
+        List<Autor> listaDeAutores1 = new ArrayList<>();
+        listaDeAutores1.add(autor1);
+        listaDeAutores1.add(autor2);
         //Publicação 2
-        listaDeAutores2.add(aut3);
-        listaDeAutores2.add(aut4);
+        List<Autor> listaDeAutores2 = new ArrayList<>();
+        listaDeAutores2.add(autor3);
+        listaDeAutores2.add(autor4);
+        
+        this.publicacao1 = new Publicacao();
+        this.publicacao1.setId(1);
+        this.publicacao1.setTitulo("Hellboy: Seed of Destruction");
+        this.publicacao1.setPaginaInicial(1);
+        this.publicacao1.setPaginaFinal(120);
+        this.publicacao1.setAnoPublicacao(1994);
+        this.publicacao1.setAutores(listaDeAutores1);
+        
+        this.publicacao2 = new Publicacao();
+        this.publicacao2.setId(2);
+        this.publicacao2.setTitulo("Coraline");
+        this.publicacao2.setPaginaInicial(1);
+        this.publicacao2.setPaginaFinal(186);
+        this.publicacao2.setAnoPublicacao(2002);
+        this.publicacao2.setAutores(listaDeAutores2);
+        
+        this.publicacao3 = new Publicacao();
+        this.publicacao3.setId(3);
+        this.publicacao3.setTitulo("Cobra Coral");
+        this.publicacao3.setPaginaInicial(1);
+        this.publicacao3.setPaginaFinal(186);
+        this.publicacao3.setAnoPublicacao(2002);
+        this.publicacao3.setAutores(listaDeAutores2);
+      
     }
         
     /**
@@ -51,8 +91,8 @@ public class PesquisaPubli {
         //return pub1.retornaPubli()+pub2.retornaPubli();
         
         List<Publicacao> lista = new ArrayList<>();
-        lista.add(pub1);
-        lista.add(pub2);
+        lista.add(this.publicacao1);
+        lista.add(this.publicacao2);
         
         return lista;
     }

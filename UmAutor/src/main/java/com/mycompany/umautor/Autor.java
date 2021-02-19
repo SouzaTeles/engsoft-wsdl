@@ -15,11 +15,32 @@ public class Autor {
     public String cpf;
     public String nome;
     
-    public Autor (int newId, String newCpf, String newNome) {
-        this.id = newId;
-        this.cpf = newCpf;
-        this.nome = newNome;
+    public int getId() {
+        return id;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
+    
+    
 
 }
 
