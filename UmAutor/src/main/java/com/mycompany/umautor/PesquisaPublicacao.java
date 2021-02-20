@@ -13,7 +13,7 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 
 /**
- *
+ * Classe de pesquisa de publicações.
  * @author Anderson, Lucas, Luís e Maycon
  */
 @WebService(serviceName = "PesquisaPublicacao")
@@ -24,8 +24,12 @@ public class PesquisaPublicacao {
     Publicacao publicacao3;
     Publicacao publicacao4;
 
-    //importante não colocar o *VOID* aqui! Senão a lista de autores fica vazia!
+    /**
+     * Construtor responsável por adicionar as publicações e os autores as classes.
+     * Neste projeto não foi utilizado BANCO DE DADOS, então não houve a necessidade de um DAO.
+     */
     public PesquisaPublicacao() {
+        
         Autor autor1 = new Autor();
         autor1.setId(1);
         autor1.setCpf("856.347.960-16");
@@ -171,9 +175,9 @@ public class PesquisaPublicacao {
     }
 
     /**
-     * Retornando uma publicação
-     * @param tituloPublicacao
-     * @return 
+     * Método responsável por retornar as publicações.
+     * @param tituloPublicacao - Filtrar as publicações pelo titulo da publicação.
+     * @return listaPublicacao
      */
     @WebMethod(operationName = "retornaPublicacao")
     public List<Publicacao> retornaPublicacao(@WebParam(name = "titulo") String tituloPublicacao) {

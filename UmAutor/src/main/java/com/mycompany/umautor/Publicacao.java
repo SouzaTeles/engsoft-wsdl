@@ -3,7 +3,7 @@ package com.mycompany.umautor;
 import java.util.List;
 
 /**
- *
+ * Classe Publicação
  * @author Anderson, Lucas, Luís e Maycon
  */
 public class Publicacao {
