@@ -2,7 +2,7 @@
 
 ## Rodar o app
 - Para rodar o app é necessário instalar o <a href="https://dotnet.microsoft.com/download/dotnet/3.1">.NET Core SDK</a> >= 3.1;
-- Garanta que o app servidor  **UmAutor** está disponibiliza o WSDL no endpoint: http://5064-nb:8080/UmAutor/PesquisaPublicacao?wsdl
+- Garanta que o app servidor  **UmAutor** disponibliza o WSDL na url: http://5064-nb:8080/UmAutor/PesquisaPublicacao?wsdl
 - Utilizando o terminal navegue até a pasta ``ConsultaPublicacaoCliente`` e digite o comando: ``dotnet run``
 
 ## Passos de construção do app cliente
@@ -14,6 +14,6 @@
 
  3. Realização da adição da referência e namespace ![Referência](./imgs/2.2.addreference.png)
 
- 4. Após o scaffolding gerado pela IDE o serviço é disponibilizado como objeto para consumo ![Consumo](./imgs/3.consumeserver.png)
+ 4. Após o *scaffolding* gerado pela IDE o serviço é disponibilizado como objeto para consumo ![Consumo](./imgs/3.consumeserver.png)
  
  5. Print em tela console do resultado do consumo do serviço ![Resultado](./imgs/4.result.png)
